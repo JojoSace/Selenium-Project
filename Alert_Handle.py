@@ -25,4 +25,4 @@ alert.accept()
 
 #dismiss the alert
 #alert.dismiss()
-time.sleep(3)
+time.sleep(5)
