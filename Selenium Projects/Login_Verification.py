@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium import webdriver
+import time
 
 driver = webdriver.Chrome()
 url = "https://practicetestautomation.com/practice-test-login/"
@@ -31,6 +32,7 @@ pass_input = driver.find_element(By.XPATH,"//input[@id='password']")
 pass_input.send_keys(password)
 driver.find_element(By.XPATH,"//button[@id='submit']").click()
 
+time.sleep(3)
 invalid_user = driver.find_element(By.ID,"error").text
 print(invalid_user)
 driver.refresh()
@@ -42,6 +44,7 @@ pass_input = driver.find_element(By.XPATH,"//input[@id='password']")
 pass_input.send_keys(pass_incorrect)
 driver.find_element(By.XPATH,"//button[@id='submit']").click()
 
+time.sleep(3)
 invalid_pass = driver.find_element(By.ID,"error").text
 print(invalid_pass)
 driver.refresh()
